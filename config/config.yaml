@@ -1,0 +1,97 @@
+# Основная конфигурация системы поиска по декларациям ЕАЭС
+
+database:
+  host: ${POSTGRES_HOST}
+  port: ${POSTGRES_PORT}
+  database: ${POSTGRES_DB}
+  user: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+  pool_size: 10
+  max_overflow: 20
+
+vector_db:
+  type: qdrant
+  host: ${QDRANT_HOST}
+  port: ${QDRANT_PORT}
+  grpc_port: ${QDRANT_GRPC_PORT}
+  collection_name: ${QDRANT_COLLECTION_NAME}
+  vector_size: 1024  # Размерность для bge-m3
+
+embedding:
+  model_name: ${EMBEDDING_MODEL_NAME}
+  device: ${EMBEDDING_DEVICE}
+  batch_size: ${EMBEDDING_BATCH_SIZE}
+  max_length: ${EMBEDDING_MAX_LENGTH}
+  normalize_embeddings: true
+
+reranker:
+  model_name: ${RERANKER_MODEL_NAME}
+  device: ${RERANKER_DEVICE}
+  batch_size: ${RERANKER_BATCH_SIZE}
+  top_k: ${RERANKER_TOP_K}
+  adaptive:
+    enabled: true
+    complexity_threshold: 0.7
+    simple_model: "BAAI/bge-reranker-base"
+    complex_model: "BAAI/bge-reranker-v2-m3"
+
+search:
+  top_k: ${SEARCH_TOP_K}
+  rerank_top_k: ${SEARCH_RERANK_TOP_K}
+  hybrid_alpha: ${SEARCH_HYBRID_ALPHA}
+  sparse:
+    enabled: true
+    k1: 1.5
+    b: 0.75
+  dense:
+    enabled: true
+    similarity_threshold: 0.0
+  metadata_filters:
+    enabled: true
+    fields:
+      - declaration_number
+      - date_issued
+      - manufacturer
+      - importer
+      - product_code
+      - country_origin
+
+chunking:
+  strategy: semantic
+  chunk_size: 512
+  chunk_overlap: 50
+  min_chunk_size: 100
+  preserve_structure: true
+
+normalization:
+  language_detection: true
+  field_normalization: true
+  code_normalization: true
+  temporal_normalization: true
+
+temporal:
+  enabled: true
+  rule_versioning: true
+  date_awareness: true
+
+explainability:
+  enabled: true
+  show_scores: true
+  show_matched_fields: true
+  show_temporal_context: true
+
+api:
+  host: ${API_HOST}
+  port: ${API_PORT}
+  reload: ${API_RELOAD}
+  workers: ${API_WORKERS}
+  cors_enabled: true
+  cors_origins:
+    - "*"
+
+logging:
+  level: ${LOG_LEVEL}
+  format: ${LOG_FORMAT}
+  file: null
+
+environment: ${ENVIRONMENT}

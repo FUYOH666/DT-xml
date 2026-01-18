@@ -1,0 +1,19 @@
+{
+  "declaration_number": "DT-2023-001234",
+  "date_issued": "2023-06-15",
+  "declaration_type": "import",
+  "status": "released",
+  "manufacturer": "Samsung Electronics Co., Ltd.",
+  "importer": "ООО \"Импортер Техники\"",
+  "product_code": "8517120000",
+  "product_description": "Смартфоны с поддержкой 5G, объем памяти 256 ГБ, экран 6.7 дюймов",
+  "country_origin": "CN",
+  "customs_value": 1500000,
+  "currency": "USD",
+  "quantity": 1000,
+  "unit_of_measure": "шт",
+  "conditions_of_supply": "CIF Москва",
+  "transport_type": "морской",
+  "version": "1.0",
+  "source": "customs_system"
+}

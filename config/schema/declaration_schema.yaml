@@ -1,0 +1,53 @@
+# Схема структуры таможенной декларации ЕАЭС
+# Базовые поля, которые должны присутствовать в декларации
+
+declaration:
+  required_fields:
+    - declaration_number
+    - date_issued
+    - declaration_type
+  
+  optional_fields:
+    - manufacturer
+    - importer
+    - exporter
+    - product_code
+    - product_description
+    - country_origin
+    - customs_value
+    - currency
+    - quantity
+    - unit_of_measure
+    - conditions_of_supply
+    - transport_type
+    - customs_point
+    - registration_number
+
+  metadata_fields:
+    - version
+    - source
+    - language
+    - processed_at
+    - status
+
+  text_fields:
+    - product_description
+    - conditions_of_supply
+    - additional_notes
+    - full_text
+
+  date_fields:
+    - date_issued
+    - date_registered
+    - date_released
+
+  code_fields:
+    - product_code  # ТН ВЭД
+    - country_origin  # ISO код страны
+    - currency  # ISO код валюты
+
+  numeric_fields:
+    - customs_value
+    - quantity
+    - weight
+    - volume

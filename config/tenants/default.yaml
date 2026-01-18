@@ -1,0 +1,128 @@
+# Схема по умолчанию для таможенных деклараций ЕАЭС
+
+tenant_id: "default"
+tenant_name: "ЕАЭС (по умолчанию)"
+
+schema:
+  # Маппинг полей из входного формата в внутренний
+  field_mapping:
+    declaration_number:
+      - "declaration_number"
+      - "declarationNumber"
+      - "НомерДекларации"
+      - "number"
+      - "номер"
+    date_issued:
+      - "date_issued"
+      - "dateIssued"
+      - "ДатаВыпуска"
+      - "date"
+      - "дата"
+    declaration_type:
+      - "declaration_type"
+      - "declarationType"
+      - "ТипДекларации"
+      - "type"
+      - "тип"
+    manufacturer:
+      - "manufacturer"
+      - "Производитель"
+      - "producer"
+      - "producer_name"
+      - "изготовитель"
+    importer:
+      - "importer"
+      - "Импортер"
+      - "importer_name"
+      - "consignee"
+      - "получатель"
+    exporter:
+      - "exporter"
+      - "Экспортер"
+      - "exporter_name"
+      - "consignor"
+      - "отправитель"
+    product_code:
+      - "product_code"
+      - "productCode"
+      - "КодТовара"
+      - "tn_ved"
+      - "hs_code"
+      - "ТНВЭД"
+    product_description:
+      - "product_description"
+      - "productDescription"
+      - "ОписаниеТовара"
+      - "description"
+      - "описание"
+    country_origin:
+      - "country_origin"
+      - "countryOrigin"
+      - "СтранаПроисхождения"
+      - "origin_country"
+      - "страна"
+    customs_value:
+      - "customs_value"
+      - "customsValue"
+      - "ТаможеннаяСтоимость"
+      - "value"
+      - "стоимость"
+    currency:
+      - "currency"
+      - "Валюта"
+      - "currency_code"
+      - "валюта"
+    quantity:
+      - "quantity"
+      - "Количество"
+      - "qty"
+      - "amount"
+      - "количество"
+    unit_of_measure:
+      - "unit_of_measure"
+      - "unitOfMeasure"
+      - "ЕдиницаИзмерения"
+      - "unit"
+      - "единица"
+
+  # Обязательные поля для поиска (P0 - обязательные, P1 - критичные для поиска)
+  required_for_search:
+    # P0 - обязательные для идентификации
+    - declaration_number
+    - date_issued
+    - declaration_type
+    # P1 - критичные для эффективного поиска
+    - manufacturer
+    - product_code
+    - product_description
+
+  # Типы полей для валидации
+  field_types:
+    declaration_number: "string"
+    date_issued: "date"
+    declaration_type: "string"
+    manufacturer: "string"
+    product_code: "string"
+    customs_value: "number"
+    quantity: "number"
+
+  # Кастомные поля (если нужны)
+  custom_fields: []
+
+# Настройки обработки
+processing:
+  ocr_enabled: true
+  ocr_confidence_threshold: 0.7
+  auto_normalize: true
+  language_detection: true
+
+# Настройки поиска
+search:
+  default_filters:
+    - manufacturer
+    - product_code
+    - date_issued
+  boost_fields:
+    manufacturer: 2.0
+    product_code: 1.5
+    product_description: 1.2
