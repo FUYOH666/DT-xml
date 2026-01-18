@@ -159,5 +159,5 @@ The first run downloads the embedding model. Ensure:
 ## Support
 
 - **Documentation**: [docs/](README.md)
-- **Issues**: [GitHub Issues](https://github.com/ScanovichAI/DT-xml/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/ScanovichAI/DT-xml/discussions)
+- **Issues**: [GitHub Issues](https://github.com/FUYOH666/DT-xml/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/FUYOH666/DT-xml/discussions)

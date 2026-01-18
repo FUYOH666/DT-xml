@@ -49,7 +49,7 @@ Feature suggestions are welcome! Please create an issue with:
 
 1. Clone your fork:
    ```bash
-   git clone https://github.com/ScanovichAI/DT-xml.git
+   git clone https://github.com/FUYOH666/DT-xml.git
    cd DT-xml
    ```
 

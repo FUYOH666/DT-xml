@@ -4,10 +4,10 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green.svg)](https://fastapi.tiangolo.com/)
 [![Qdrant](https://img.shields.io/badge/Qdrant-Latest-orange.svg)](https://qdrant.tech/)
-[![GitHub stars](https://img.shields.io/github/stars/ScanovichAI/DT-xml?style=social)](https://github.com/ScanovichAI/DT-xml)
-[![GitHub forks](https://img.shields.io/github/forks/ScanovichAI/DT-xml?style=social)](https://github.com/ScanovichAI/DT-xml)
-[![GitHub issues](https://img.shields.io/github/issues/ScanovichAI/DT-xml)](https://github.com/ScanovichAI/DT-xml/issues)
-[![GitHub license](https://img.shields.io/github/license/ScanovichAI/DT-xml)](https://github.com/ScanovichAI/DT-xml/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/FUYOH666/DT-xml?style=social)](https://github.com/FUYOH666/DT-xml)
+[![GitHub forks](https://img.shields.io/github/forks/FUYOH666/DT-xml?style=social)](https://github.com/FUYOH666/DT-xml)
+[![GitHub issues](https://img.shields.io/github/issues/FUYOH666/DT-xml)](https://github.com/FUYOH666/DT-xml/issues)
+[![GitHub license](https://img.shields.io/github/license/FUYOH666/DT-xml)](https://github.com/FUYOH666/DT-xml/blob/main/LICENSE)
 
 **🇷🇺 [Русская версия](#русская-версия) | 🇬🇧 [English Version](#english-version)**
 
@@ -77,7 +77,7 @@ DT-XML is an **AI-powered semantic search system** for historical customs declar
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/ScanovichAI/DT-xml.git
+git clone https://github.com/FUYOH666/DT-xml.git
 cd DT-xml
 ```
 
@@ -263,7 +263,7 @@ DT-XML - это **система семантического поиска на 
 
 1. **Клонируйте репозиторий:**
 ```bash
-git clone https://github.com/ScanovichAI/DT-xml.git
+git clone https://github.com/FUYOH666/DT-xml.git
 cd DT-xml
 ```
 
@@ -401,7 +401,7 @@ for result in results["results"]:
 
 - 🌐 Website: [https://scanovich.ai/](https://scanovich.ai/)
 - 💬 Telegram: [@ScanovichAI](https://t.me/ScanovichAI)
-- 💬 Issues: [GitHub Issues](https://github.com/ScanovichAI/DT-xml/issues)
+- 💬 Issues: [GitHub Issues](https://github.com/FUYOH666/DT-xml/issues)
 - 📖 Documentation: [docs/](docs/)
 
 ---
